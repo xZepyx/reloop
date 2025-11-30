@@ -42,13 +42,19 @@ Follow these steps to install the utility.
     cd ~/Documents/Reloop
     ```
 
-2. Run the installer:
+2. Build the project:
     ```bash
-    cd src && bash install.sh
+    mkdir build && cd build
+    cmake ..
+    make
     ```
-    - The installer will compile and install the utility to /usr/bin/reloop
+3. Install the project to the system:
+   ```
+   sudo make install
+   ```
+    - The installer will compile and install the utility to /usr/local/bin/reloop
 
-3.  Installtion complete now enjoy the power and simplicity of reloop.
+4.  Installtion complete now enjoy the power and simplicity of reloop.
 
 ---
 
@@ -63,6 +69,7 @@ Follow these steps to install the utility.
 - --background :       Run the program as a background daemon.
 - --command <cmd>:    Command to execute on file change (in quotes).
 - --logfile <path>:   Specify a log file to redirect output.
+- --watchfolder <path> Specify the folder to watch changes in.;
 - --watchfile <path>: Specify the file to watch for changes.
 - --help   :          Display this help message.
 
